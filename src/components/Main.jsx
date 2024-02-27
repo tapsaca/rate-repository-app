@@ -4,6 +4,7 @@ import RepositoryList from './RepositoryList'
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'gray',
     flexGrow: 1,
     flexShrink: 1
   }
