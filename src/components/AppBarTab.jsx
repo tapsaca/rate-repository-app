@@ -1,21 +1,29 @@
-import { Pressable, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { Link } from 'react-router-native'
 import Text from './Text'
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     margin: 10
   }
 })
 
 const AppBarTab = () => {
   return (
-    <Pressable>
-      <View style={styles.container}>
-        <Text color="textSecondary" fontSize="subheading" fontWeight="bold">
+    <View style={styles.container}>
+      <Link to='/'>
+        <Text color='textSecondary' fontSize='subheading' fontWeight='bold'>
           Repositories
         </Text>
-      </View>
-    </Pressable>
+      </Link>
+      <Link to='/signin'>
+        <Text color='textSecondary' fontSize='subheading' fontWeight='bold'>
+          Sign In
+        </Text>
+      </Link>
+    </View>
   )
 }
 
