@@ -1,29 +1,20 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Link } from 'react-router-native'
 import Text from './Text'
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    margin: 10
+  tab: {
+    padding: 20
   }
 })
 
-const AppBarTab = () => {
+const AppBarTab = ({ path, text }) => {
   return (
-    <View style={styles.container}>
-      <Link to='/'>
-        <Text color='textSecondary' fontSize='subheading' fontWeight='bold'>
-          Repositories
-        </Text>
-      </Link>
-      <Link to='/signin'>
-        <Text color='textSecondary' fontSize='subheading' fontWeight='bold'>
-          Sign In
-        </Text>
-      </Link>
-    </View>
+    <Link to={path}>
+      <Text style={styles.tab} color='textSecondary' fontSize='subheading' fontWeight='bold'>
+        {text}
+      </Text>
+    </Link>
   )
 }
 
